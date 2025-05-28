@@ -43,14 +43,6 @@ const examples: Example[] = [
         code: `const currentTime = Temporal.Now.plainTimeISO();`,
         exec: () => Temporal.Now.plainTimeISO().toString(),
       },
-      /*
-      // Temporal.Now.plainMonthDayISO() は一部の環境や古いポリフィルで未サポートの可能性があります。
-      // ご指摘いただいた通り、今回はスキップします。
-      {
-        code: `const currentMonthDay = Temporal.Now.plainMonthDayISO();`,
-        exec: () => Temporal.Now.plainMonthDayISO().toString()
-      }
-      */
     ],
   },
   {
