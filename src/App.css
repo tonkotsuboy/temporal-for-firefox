@@ -1,0 +1,98 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; /* bodyのマージンをリセット */
+  padding: 20px; /* 全体的なパディング */
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto; /* 中央揃え */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #0056b3;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+h1 + p {
+  text-align: center;
+}
+
+.section-title {
+  width: 100%;
+  margin: 20px 0 10px;
+  font-weight: bold;
+  color: #0056b3;
+  border-bottom: 2px solid #cceeff;
+  padding-bottom: 8px;
+  font-size: 1.5em;
+}
+
+.example-block {
+  background-color: #fcfcfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 縦並びなので、flex関連のプロパティを調整 */
+.code-display,
+.result-display {
+  width: 100%; /* 親要素の幅いっぱいに広げる */
+  box-sizing: border-box;
+}
+
+.code-display pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #333;
+  border: 1px solid #ddd; /* コードブロックのボーダー */
+}
+
+.result-display pre {
+  background-color: #e8f5e9; /* 薄い緑色 */
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #1a4d0f; /* 濃い緑色 */
+  border: 1px dashed #a5d6a7; /* 破線ボーダー */
+  min-height: 2em; /* 結果がない場合でも高さを確保 */
+  display: flex;
+  align-items: center; /* 垂直中央揃え */
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.error-result {
+  color: #d32f2f !important; /* エラー結果は赤色 */
+  border-color: #d32f2f !important; /* エラー結果のボーダーも赤色 */
+  background-color: #ffebee !important; /* エラー結果の背景も赤系 */
+}
