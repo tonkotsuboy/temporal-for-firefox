@@ -352,7 +352,7 @@ const App: FC = () => {
   return (
     <div className="App">
       <h1>Temporal API サンプルコードと実行結果</h1>
-      <p>Firefox 137+</p>
+      <p>Firefox 139+</p>
 
       {examples.map((example, index) => (
         <div key={index}>
