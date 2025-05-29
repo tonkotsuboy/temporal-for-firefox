@@ -292,14 +292,14 @@ const totalDuration = duration1.add(duration2);`,
           return duration1.add(duration2).toString();
         },
       },
-//       {
-//         code: `const duration = Temporal.Duration.from({ hours: 5, minutes: 30 });
-// const halfDuration = duration.multiply(0.5);`,
-//         exec: () => {
-//           const duration = Temporal.Duration.from({ hours: 5, minutes: 30 });
-//           return duration.multiply(0.5).toString();
-//         },
-//       },
+      //       {
+      //         code: `const duration = Temporal.Duration.from({ hours: 5, minutes: 30 });
+      // const halfDuration = duration.multiply(0.5);`,
+      //         exec: () => {
+      //           const duration = Temporal.Duration.from({ hours: 5, minutes: 30 });
+      //           return duration.multiply(0.5).toString();
+      //         },
+      //       },
     ],
   },
   {
@@ -352,7 +352,10 @@ const App: FC = () => {
   return (
     <div className="App">
       <h1>Temporal API サンプルコードと実行結果</h1>
-      <p>Firefox 139+</p>
+      <div className="description">
+        <p>Firefox 139+</p>
+        <p><a href="https://x.com/tonkotsuboy_com/status/1927695159623352428" target="_blank">https://x.com/tonkotsuboy_com/status/1927695159623352428</a></p>
+      </div>
 
       {examples.map((example, index) => (
         <div key={index}>

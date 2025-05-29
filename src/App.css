@@ -1,14 +1,13 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0; /* bodyのマージンをリセット */
-  padding: 20px; /* 全体的なパディング */
+  margin: 0;
+  padding: 24px;
   background-color: #f4f4f4;
   color: #333;
 }
 
 .App {
   max-width: 800px;
-  margin: 0 auto; /* 中央揃え */
+  margin: 0 auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -22,8 +21,15 @@ h1 {
   margin-bottom: 30px;
 }
 
-h1 + p {
+.description {
+  display: grid;
+  place-content: center;
   text-align: center;
+  gap: 4px;
+}
+
+.description > * {
+  margin: 0;
 }
 
 .section-title {
