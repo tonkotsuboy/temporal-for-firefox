@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { type FC, useState, useEffect } from 'react';
 
 // ExampleBlock コンポーネントのProps型
 type ExampleBlockProps = {
@@ -6,8 +6,7 @@ type ExampleBlockProps = {
   execFunction: () => string;
 }
 
-
-const ExampleBlock: React.FC<ExampleBlockProps> = ({ code, execFunction }) => {
+const ExampleBlock: FC<ExampleBlockProps> = ({ code, execFunction }) => {
   const [result, setResult] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
 
@@ -15,7 +14,7 @@ const ExampleBlock: React.FC<ExampleBlockProps> = ({ code, execFunction }) => {
     // コンポーネントがマウントされた時、またはpropが変更された時に実行
     try {
       if (typeof Temporal === 'undefined') {
-        throw new Error("Temporal API not loaded. Check polyfill.");
+        throw new Error("Temporal APIが有効化されていません。\nFirefox 137以降を使ってください");
       }
       const executionResult = execFunction();
       setResult(executionResult);

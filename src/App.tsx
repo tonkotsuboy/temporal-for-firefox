@@ -1,27 +1,20 @@
-import React from 'react';
-import './App.css'; // スタイルをインポート
-import ExampleBlock from './ExampleBlock'; // ExampleBlockコンポーネントをインポート
+import './App.css';
+import { type FC } from 'react';
+import ExampleBlock from './ExampleBlock';
 
 // Temporal API のグローバル宣言
 declare global {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const Temporal: any;
 }
 
-export type Example = {
+type Example = {
   title: string;
   codeBlocks: {
     code: string;
     exec: () => string;
   }[];
 };
-
-// Temporal APIが利用可能であることを確認
-// ポリフィルがロードされているか、ブラウザがネイティブサポートしている必要があります
-if (typeof Temporal === 'undefined') {
-  console.error(
-    'Temporal APIは現在の環境では利用できません。@js-temporal/polyfillがインストールされ、適切にロードされていることを確認してください。'
-  );
-}
 
 const examples: Example[] = [
   {
@@ -355,7 +348,7 @@ const lastDayOfMonth = date.with({ day: date.daysInMonth });`,
   },
 ];
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <div className="App">
       <h1>Temporal API サンプルコードと実行結果</h1>
